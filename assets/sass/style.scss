@@ -11,5 +11,14 @@ body {
     background-color: var(--background);
 }
 
+.divSexy {
+    opacity:0.1;
+    margin:0% 10% 25px 10%;
+    @include box(80%,1px);
+    border-bottom:solid 1px var(--text);
+}
 
+.blue {
+    color:var(--text2);
+}
 

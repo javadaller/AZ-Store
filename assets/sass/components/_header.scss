@@ -3,25 +3,11 @@
 header {
     @extend .flexAroundCenter;
     flex-wrap: wrap;
-    height:75px;
+    height:150px;
     padding:0px 3% 0px 3%;
 
-    nav, section {
-        @extend .flexBetweenCenter;
-    }
-
-    nav {
-        width:300px;
-        div {
-            @extend .pointer;
-        }
-        div:hover {
-            transform: scale(110%);
-            color:var(--text2);
-        }
-    }
-
     section {
+        @extend .flexBetweenCenter;
         width:75px;
         img {
             height:25px;

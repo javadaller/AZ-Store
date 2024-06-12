@@ -1,6 +1,70 @@
 main {
-    display: flex;
+    @extend .flexCenterCenter;
     flex-wrap: wrap;
+    @include responsive(500px) {
+        flex-direction: row;
+    }
+
+    #title {
+        width:400px;
+        margin-left: 10%;
+        @extend .flexColumnCenterCenter;
+        h2 {
+            font-size: 4rem;
+        }
+    }
+
+    #seeOurStore {
+        padding:10px;
+        border-radius: 5px;
+        background: linear-gradient(90deg, var(--background2) 0%, var(--background3) 100%);
+        @extend .pointer;
+        margin-bottom: 25px;
+    }
+    #seeOurStore:hover {
+        transform:scale(110%);
+    }
+    #logo {
+        position:relative;
+        margin: auto;
+        @include box(450px);
+        background-image: url("../images/shoe_one.png");
+        @extend .backgroundImageDefault;
+
+        p {
+            z-index: -1;
+            @extend .absoluteCenter;
+            font-size: 16rem;
+            color:var(--background);
+            text-shadow: 0px 0px 1px var(--text);
+        }
+    }
+
+    h3 {
+        width:80%;
+        margin-left: 10%;
+    }
+
+    #bestQuality {
+        @extend .flexColumnCenterCenter;
+
+        #logo2 {
+            margin-top: 50px;
+            @include box(250px);
+            background-image: url("../images/shoe_two.png");
+            @extend .backgroundImageDefault;
+        }
+
+        h2 {
+            font-size: 3rem;
+            width:80%;
+        }
+
+        p {
+            width:90%;
+        }
+    }
+    
 }
 
 main::-webkit-scrollbar {
