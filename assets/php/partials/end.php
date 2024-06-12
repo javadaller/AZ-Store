@@ -14,3 +14,9 @@
     </nav>
 
 </footer>
+
+</body>
+
+<script type="module" src="../js/main.js"></script>
+
+</html>
