@@ -550,6 +550,45 @@ html[data-theme="dark"] {
   font-family: "Ubuntu";
   src: url("../fonts/Ubuntu_Sans/UbuntuSans-VariableFont_wdth,wght.ttf") format("truetype");
 }
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid #fff;
+  background-color: #000;
+}
+footer ul {
+  display: flex;
+  list-style-type: none;
+  padding: 20px 0;
+}
+footer ul li {
+  margin: 0 10px;
+}
+footer ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+main::-webkit-scrollbar {
+  width: 20px;
+}
+
+main::-webkit-scrollbar-track {
+  background: var(--colorBackground);
+}
+
+main::-webkit-scrollbar-thumb {
+  background-color: var(--colorText);
+  border-radius: 20px;
+  border: solid 7px var(--colorBackground);
+}
+
 .flexCenterCenter {
   display: flex;
   justify-content: center;
@@ -658,6 +697,40 @@ header section img:hover {
 header section div:hover {
   transform: scale(110%);
   color: var(--text2);
+}
+
+.shop__card {
+  margin: 20px;
+  width: 200px;
+}
+.shop__card img {
+  width: 200px;
+  height: auto;
+  background-color: #333;
+}
+.shop__card .card__details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  margin-top: 10px;
+}
+.shop__card .card__details .card__details--name {
+  padding: 5px;
+}
+.shop__card .card__details .card__details--name .detail__name {
+  font-weight: bold;
+}
+.shop__card .card__details .card__details--name .detail__price {
+  font-weight: 300;
+}
+.shop__card .card__details button {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-min-content;
+  height: min-content;
+  padding: 10px;
+  font-size: 12px;
 }
 
 body {

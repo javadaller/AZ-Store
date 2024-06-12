@@ -1,0 +1,16 @@
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main::-webkit-scrollbar {
+    width: 20px;
+}
+main::-webkit-scrollbar-track {
+    background: var(--colorBackground);
+}
+main::-webkit-scrollbar-thumb {
+    background-color: var(--colorText);
+    border-radius: 20px;
+    border:solid 7px var(--colorBackground);
+}

@@ -1,0 +1,33 @@
+.shop__card{
+    margin: 20px;
+    width: 200px;
+    img{
+        width: 200px;
+        height: auto;
+        background-color: #333; //couleur a changer
+    }
+    .card__details{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+        margin-top: 10px;
+        .card__details--name{
+            padding: 5px;
+            .detail__name{
+                font-weight: bold;
+                
+
+            }
+            .detail__price{
+                font-weight: 300;
+            }
+        }
+        button{
+            width: fit-content;
+            height:min-content;
+            padding: 10px;
+            font-size: 12px;
+        }
+    }
+}
