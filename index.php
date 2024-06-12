@@ -1,3 +1,7 @@
+<?php
+
+?>
+
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 
@@ -16,7 +20,19 @@
 <body>
 
     <header>
-        
+        <h1>AZ[store]</h1>
+
+        <nav>
+            <div>Home</div>
+            <div>About</div>
+            <div>Products</div>
+            <div>Contact</div>
+        </nav>
+
+        <section>
+            <img src="assets/images/icons/shopping-cart.svg" alt="shopping cart">
+            <div>Login</div>
+        </section> 
     </header>
 
     <main>
