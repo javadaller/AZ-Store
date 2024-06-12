@@ -4,7 +4,7 @@ header {
     @extend .flexAroundCenter;
     flex-wrap: wrap;
     height:75px;
-    padding:0px 5% 0px 5%;
+    padding:0px 3% 0px 3%;
 
     nav, section {
         @extend .flexBetweenCenter;
@@ -22,6 +22,7 @@ header {
     }
 
     section {
+        width:75px;
         img {
             height:25px;
             filter: invert(94%) sepia(3%) saturate(814%) hue-rotate(197deg) brightness(104%) contrast(84%);

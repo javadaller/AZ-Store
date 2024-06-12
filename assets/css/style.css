@@ -635,7 +635,7 @@ html[data-theme="dark"] {
 header {
   flex-wrap: wrap;
   height: 75px;
-  padding: 0px 5% 0px 5%;
+  padding: 0px 3% 0px 3%;
 }
 header nav {
   width: 300px;
@@ -643,6 +643,9 @@ header nav {
 header nav div:hover {
   transform: scale(110%);
   color: var(--text2);
+}
+header section {
+  width: 75px;
 }
 header section img {
   height: 25px;
