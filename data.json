@@ -3,61 +3,61 @@
       "id": 1,
       "product": "Nike Air Max 270",
       "price": 140,
-      "image_url": "/assets/img/nike-air-max-279.jpeg"
+      "image_url": "../images/shoe_one.png"
     },
     {
       "id": 2,
       "product": "Nike Air Zoom Pegasus",
       "price": 120,
-      "image_url": "/assets/img/nike-air-max-279.jpeg"
+      "image_url": "../images/shoe_two.png"
     },
     {
       "id": 3,
       "product": "Nike Air VaporMax",
       "price": 180,
-      "image_url": "/assets/img/nike-air-max-279.jpeg"
+      "image_url": "../images/shoe_one.png"
     },
     {
       "id": 4,
       "product": "Nike Air Force 1",
       "price": 110,
-      "image_url": "/assets/img/nike-air-max-279.jpeg"
+      "image_url": "../images/shoe_two.png"
     },
     {
       "id": 5,
       "product": "Nike Air Max 90",
       "price": 130,
-      "image_url": "/assets/img/nike-air-max-279.jpeg"
+      "image_url": "../images/shoe_one.png"
     },
     {
       "id": 6,
       "product": "Nike Air Zoom Winflo",
       "price": 100,
-      "image_url": "/assets/img/nike-air-max-279.jpeg"
+      "image_url": "../images/shoe_two.png"
     },
     {
       "id": 7,
       "product": "Nike React Infinity Run",
       "price": 160,
-      "image_url": "/assets/img/nike-air-max-279.jpeg"
+      "image_url": "../images/shoe_one.png"
     },
     {
       "id": 8,
       "product": "Nike Air Zoom Structure",
       "price": 140,
-      "image_url": "/assets/img/nike-air-max-279.jpeg"
+      "image_url": "../images/shoe_two.png"
     },
     {
       "id": 9,
       "product": "Nike Air Zoom Alphafly",
       "price": 250,
-      "image_url": "/assets/img/nike-air-max-279.jpeg"
+      "image_url": "../images/shoe_one.png"
     },
     {
       "id": 10,
       "product": "Nike Blazer Mid '77",
       "price": 110,
-      "image_url": "/assets/img/nike-air-max-279.jpeg"
+      "image_url": "../images/shoe_two.png"
     }
   ]
   
