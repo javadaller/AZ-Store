@@ -8,7 +8,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
         <!--<link rel="icon" type="svg" href="assets/images/icons/calendar-todo-line.svg">-->
         
     </head>
@@ -23,9 +23,7 @@
 
     </main>
 
-    <footer>
-
-    </footer>
+    <?php require('./partials/footer.php') ?>
 
 </body>
 
