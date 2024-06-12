@@ -1,6 +1,6 @@
 main {
-    @include box(100%,85dvh);
-    overflow-y: scroll;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 main::-webkit-scrollbar {

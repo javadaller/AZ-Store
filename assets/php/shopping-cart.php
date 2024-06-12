@@ -29,19 +29,16 @@
                 <div class="shop__card">
                     <img src="' . $product['image_url'] . '" alt="' . $product['product'] . '">
                     <div class="card__details">
-                        <button>Add to cart</button>
                         <div class="card__details--name">
                             <p class="detail__name">' . $product['product'] . '</p>
                             <p class="detail__price">' . $product['price'] . '€</p>
                         </div>
+                        <button>Add to cart</button>
                     </div>
                 </div>
                 ';
         }
         ?>
-
-
-        
     </main>
 
     <?php require('./partials/footer.php') ?>
