@@ -1,0 +1,43 @@
+@use "../extends/_extends_dir";
+
+header {
+    @extend .flexAroundCenter;
+    flex-wrap: wrap;
+    height:75px;
+    padding:0px 5% 0px 5%;
+
+    nav, section {
+        @extend .flexBetweenCenter;
+    }
+
+    nav {
+        width:300px;
+        div {
+            @extend .pointer;
+        }
+        div:hover {
+            transform: scale(110%);
+            color:var(--text2);
+        }
+    }
+
+    section {
+        img {
+            height:25px;
+            filter: invert(94%) sepia(3%) saturate(814%) hue-rotate(197deg) brightness(104%) contrast(84%);
+            @extend .pointer;
+        }
+        img:hover {
+            transform: scale(110%);
+            filter: invert(31%) sepia(99%) saturate(3070%) hue-rotate(215deg) brightness(95%) contrast(94%);
+        }
+
+        div {
+            @extend .pointer;
+        }
+        div:hover {
+            transform: scale(110%);
+            color:var(--text2);
+        }
+    }
+}

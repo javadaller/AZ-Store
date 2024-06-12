@@ -514,6 +514,13 @@ template {
     transform: rotate(45deg);
   }
 }
+:root {
+  --background:#111827;
+  --background2:#3b82f6;
+  --text:#e5e7eb;
+  --text2:#2563eb;
+}
+
 /*html[data-theme="light"] {
 
 }
@@ -543,6 +550,115 @@ html[data-theme="dark"] {
   font-family: "Ubuntu";
   src: url("../fonts/Ubuntu_Sans/UbuntuSans-VariableFont_wdth,wght.ttf") format("truetype");
 }
+.flexCenterCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexAroundCenter, header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flexBetweenCenter, header nav, header section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flexEndCenter {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.flexStartCenter {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.flexColumnCenterCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexColumnAroundCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flexColumnBetweenCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flexColumnBetweenStart {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.absoluteCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.absoluteTopLeft {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.backgroundImageDefault {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.pointer, header nav div, header section img, header section div {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+header {
+  flex-wrap: wrap;
+  height: 75px;
+  padding: 0px 5% 0px 5%;
+}
+header nav {
+  width: 300px;
+}
+header nav div:hover {
+  transform: scale(110%);
+  color: var(--text2);
+}
+header section img {
+  height: 25px;
+  filter: invert(94%) sepia(3%) saturate(814%) hue-rotate(197deg) brightness(104%) contrast(84%);
+}
+header section img:hover {
+  transform: scale(110%);
+  filter: invert(31%) sepia(99%) saturate(3070%) hue-rotate(215deg) brightness(95%) contrast(94%);
+}
+header section div:hover {
+  transform: scale(110%);
+  color: var(--text2);
+}
+
 body {
   font-family: Ubuntu;
+  color: var(--text);
+  background-color: var(--background);
 }/*# sourceMappingURL=style.css.map */
