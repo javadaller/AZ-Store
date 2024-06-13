@@ -612,6 +612,8 @@ main #seeOurStore:hover {
   transform: scale(110%);
 }
 main #logo {
+  display: flex;
+  flex-wrap: wrap;
   position: relative;
   margin: auto;
   width: 300px;

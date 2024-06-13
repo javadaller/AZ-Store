@@ -37,6 +37,8 @@ main {
     }
 
     #logo {
+        display: flex;
+        flex-wrap: wrap;
         position:relative;
         margin: auto;
         width:300px;
