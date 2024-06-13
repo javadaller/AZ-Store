@@ -774,11 +774,7 @@ main #testimonials .testimonialCard p {
   background-size: cover;
 }
 
-<<<<<<< HEAD
-.pointer, main #about .socials .linkedin, main #about .socials .github, nav div, .shop__card .card__details button, main #seeOurStore, header h1, header section img, header section div {
-=======
-.pointer, .shop__cart button, .shop__cart span, nav div, .shop__card .card__details button, main #seeOurStore, header h1, header section img, header section div {
->>>>>>> origin/dylan
+.pointer, .shop__cart button, .shop__cart span, main #about .socials .linkedin, main #about .socials .github, nav div, .shop__card .card__details button, main #seeOurStore, header h1, header section img, header section div {
   cursor: pointer;
   transition: 0.3s;
 }
@@ -797,7 +793,7 @@ header h1 {
   }
 }
 header section {
-  position: absolute;
+  position: fixed;
   top: 2%;
   right: 5%;
   width: 75px;
@@ -809,6 +805,22 @@ header section img {
 header section img:hover {
   transform: scale(110%);
   filter: invert(31%) sepia(99%) saturate(3070%) hue-rotate(215deg) brightness(95%) contrast(94%);
+}
+header section #loginSvg {
+  display: block;
+}
+@media only screen and (min-width: 850px) {
+  header section #loginSvg {
+    display: none;
+  }
+}
+header section div {
+  display: none;
+}
+@media only screen and (min-width: 850px) {
+  header section div {
+    display: block;
+  }
 }
 header section div:hover {
   transform: scale(110%);
@@ -891,7 +903,6 @@ main::-webkit-scrollbar-thumb {
   border-radius: 20px;
 }
 
-<<<<<<< HEAD
 main #about {
   width: 80%;
   margin: 50px 0px 50px 0px;
@@ -934,14 +945,6 @@ main #about .teamDescription {
   text-align: center;
 }
 
-html {
-  height: 100%;
-  background: linear-gradient(180deg, var(--background) 0%, black 100%);
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  overflow: hidden;
-=======
 .shop__cart {
   width: 100%;
   display: flex;
@@ -997,7 +1000,15 @@ html {
   transform: scale(110%);
   color: var(--background);
   background-color: var(--text);
->>>>>>> origin/dylan
+}
+
+html {
+  height: 100%;
+  background: linear-gradient(180deg, var(--background) 0%, black 100%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
 }
 
 body {
@@ -1019,4 +1030,4 @@ body {
 
 .blue {
   color: var(--text2);
-}
+}/*# sourceMappingURL=style.css.map */

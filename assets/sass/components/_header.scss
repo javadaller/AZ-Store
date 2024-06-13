@@ -15,7 +15,7 @@ header {
         @extend .pointer;
     }
     section {
-        position: absolute;
+        position: fixed;
         top:2%;
         right:5%;
         @extend .flexBetweenCenter;
@@ -30,8 +30,19 @@ header {
             filter: invert(31%) sepia(99%) saturate(3070%) hue-rotate(215deg) brightness(95%) contrast(94%);
         }
 
+        #loginSvg {
+            display:block;
+            @include responsive(850px) {
+                display:none;
+            }
+        }
+
         div {
             @extend .pointer;
+            display:none;
+            @include responsive(850px) {
+                display:block;
+            }
         }
         div:hover {
             transform: scale(110%);

@@ -35,6 +35,10 @@ export function nav() {
         window.location.href = '../php/login.php';
     })
 
+    document.querySelector('#loginSvg').addEventListener('click', () => {
+        window.location.href = '../php/login.php';
+    })
+
     const seeOurStore = document.querySelector('#seeOurStore')
     if(seeOurStore != null) {
         seeOurStore.addEventListener('click', () => {
