@@ -24,6 +24,10 @@ main {
         background: linear-gradient(90deg, var(--background2) 0%, var(--background3) 100%);
         @extend .pointer;
         margin-bottom: 25px;
+        align-self: center;
+        @include responsive(950px) {
+            align-self: flex-start;
+        }
     }
     #seeOurStore:hover {
         transform:scale(110%);

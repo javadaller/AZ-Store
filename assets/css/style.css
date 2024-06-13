@@ -596,6 +596,12 @@ main #seeOurStore {
   border-radius: 5px;
   background: linear-gradient(90deg, var(--background2) 0%, var(--background3) 100%);
   margin-bottom: 25px;
+  align-self: center;
+}
+@media only screen and (min-width: 950px) {
+  main #seeOurStore {
+    align-self: flex-start;
+  }
 }
 main #seeOurStore:hover {
   transform: scale(110%);
