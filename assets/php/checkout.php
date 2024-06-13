@@ -18,13 +18,15 @@
             <button type="submit">confirm command</button><br>
         </form>
         <?php
-            $firstname = cleanInput('firstName', '');
-            $lastname = cleanInput('lastName', '');
-            $email = cleanInput('email', '');
-            $adresse = cleanInput('adresse', '');
-            $city = cleanInput('city', '');
-            $ZIP = cleanInput('ZIP', '');
-            $country = cleanInput('country', '');
+            $emptyInput = null;
+            $firstname = cleanInput('firstName', 'a first name');
+            $lastname = cleanInput('lastName', 'a last name');
+            $email = cleanAndCheckEmail('email', ' an email');
+            $adresse = cleanInput('adresse', 'an adresse');
+            $city = cleanInput('city', 'a city');
+            $ZIP = cleanInput('ZIP', 'a ZIP code');
+            $country = cleanInput('country', 'a country');
+            
 
             if (isset($firstname) && isset($lastname) && isset($email) && validEmail($email) && isset($adresse) && isset($city) && isset($ZIP) && isset($country)){
                 echo '<div class="pop-upWindow">Thank you for your order!</div>';
@@ -35,12 +37,11 @@
                 $city = null;
                 $ZIP = null;
                 $country = null;
+                $emptyInput = null;
             }else{
-                echo '<div>Please enter all entries corectly</div>';
+                echo "<div>$emptyInput</div>";
             }
 
-            
-                
             function cleanInput($input, $errorMessage){
                 if (isset($_GET[$input])){
                     $content = trim($_GET[$input]);
@@ -48,9 +49,40 @@
                         return $content;
                     }
                 }
-                echo $errorMessage;   
+                global $emptyInput;
+                if ($emptyInput == null){
+                    $emptyInput = 'please fill in a ' . $errorMessage;
+                }else{
+                    $emptyInput = 'Please enter all entries correctly';
+                }
+                
                 return null;
             }
+
+            function cleanAndCheckEmail($input, $errorMessage){
+                if (isset($_GET[$input])){
+                    $content = trim($_GET[$input]);
+                    if (strlen($content) > 0 && validEmail($content)){
+                        return $content;
+                    }else{
+                        global $emptyInput;
+                        if ($emptyInput == null){
+                            $emptyInput = 'please enter a valid email adresse';
+                        }
+                    }
+                }else{
+                    global $emptyInput;
+                    if ($emptyInput == null){
+                        $emptyInput = 'please fill in a ' . $errorMessage;
+                    }else{
+                        $emptyInput = 'Please enter all entries correctly';
+                    }
+                }
+                
+                
+                return null;
+            }
+
             function validEmail($emailToCheck) {
                 $valid = "/[a-zA-Z0-9_-.+]+@[a-zA-Z0-9-]+.[a-zA-Z]+/";
                 return ($emailToCheck == $valid);
