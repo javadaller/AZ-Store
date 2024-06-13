@@ -1,8 +1,14 @@
 main {
     #about {
-        @include box(60%,auto);
+        width:80%;
         @extend .flexColumnCenterCenter;
         margin: 50px 0px 50px 0px;
+        @include responsive(800px) {
+            width:60%;
+        }
+        @include responsive(1000px) {
+            width:50%;
+        }
 
         .teamTitle {
             font-size: 5vw;
@@ -23,7 +29,7 @@ main {
             .linkedin {
                 display: inline;
                 height:25px;
-                //filter: invert(94%) sepia(3%) saturate(814%) hue-rotate(197deg) brightness(104%) contrast(84%);
+                filter: invert(94%) sepia(3%) saturate(814%) hue-rotate(197deg) brightness(104%) contrast(84%);
                 @extend .pointer;
             }
             .linkedin:hover {
@@ -34,6 +40,10 @@ main {
 
         .teamName {
             margin-top: 50px;
+        }
+
+        .teamDescription {
+            text-align: center;
         }
     }
 }

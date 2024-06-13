@@ -795,7 +795,7 @@ header h1 {
 header section {
   position: absolute;
   top: 2%;
-  right: 2%;
+  right: 5%;
   width: 75px;
 }
 header section img {
@@ -888,9 +888,18 @@ main::-webkit-scrollbar-thumb {
 }
 
 main #about {
-  width: 60%;
-  height: auto;
+  width: 80%;
   margin: 50px 0px 50px 0px;
+}
+@media only screen and (min-width: 800px) {
+  main #about {
+    width: 60%;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  main #about {
+    width: 50%;
+  }
 }
 main #about .teamTitle {
   font-size: 5vw;
@@ -907,6 +916,7 @@ main #about .socials .github:hover {
 main #about .socials .linkedin {
   display: inline;
   height: 25px;
+  filter: invert(94%) sepia(3%) saturate(814%) hue-rotate(197deg) brightness(104%) contrast(84%);
 }
 main #about .socials .linkedin:hover {
   transform: scale(110%);
@@ -914,6 +924,9 @@ main #about .socials .linkedin:hover {
 }
 main #about .teamName {
   margin-top: 50px;
+}
+main #about .teamDescription {
+  text-align: center;
 }
 
 html {

@@ -23,7 +23,7 @@ export function nav() {
     const contact = document.querySelectorAll('.navContact')
     contact.forEach(element => {
         element.addEventListener('click', () => {
-            window.location.href = '../php/contact.php';
+            window.location.href = 'https://www.radiocontact.be/';
         })
     });
 
