@@ -33,7 +33,7 @@
                             <p class="detail__name">' . $product['product'] . '</p>
                             <p class="detail__price">' . $product['price'] . '€</p>
                         </div>
-                        <button>Add to cart</button>
+                        <button class="card__btnAdd">Add to cart</button>
                     </div>
                 </div>
                 ';
