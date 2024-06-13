@@ -618,7 +618,7 @@ main #logo p {
     font-size: 20vw;
   }
 }
-main h3 {
+main .ourLastProducts {
   width: 80%;
   margin-left: 10%;
 }
@@ -648,33 +648,81 @@ main #bestQuality p {
     text-align: center;
   }
 }
+main #testimonials {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin-top: 100px;
+  margin-bottom: 25px;
+}
+@media only screen and (min-width: 1500px) {
+  main #testimonials {
+    flex-direction: row;
+  }
+}
+main #testimonials .testimonialCard {
+  width: 80%;
+  height: 100%;
+  margin-top: 25px;
+}
+@media only screen and (min-width: 1400px) {
+  main #testimonials .testimonialCard {
+    width: 60%;
+    margin-top: 0;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  main #testimonials .testimonialCard {
+    width: 25%;
+  }
+}
+main #testimonials .testimonialCard .portrait {
+  border-radius: 50%;
+  height: 100px;
+}
+main #testimonials .testimonialCard .testimonialName {
+  margin-top: 25px;
+  text-align: center;
+}
+main #testimonials .testimonialCard p {
+  margin-top: 25px;
+  width: 100%;
+}
 
 .flexCenterCenter, footer, main {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
 .flexAroundCenter, header {
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
 }
 
 .flexBetweenCenter, nav, header section {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 
 .flexEndCenter {
   display: flex;
+  flex-direction: row;
   justify-content: flex-end;
   align-items: center;
 }
 
 .flexStartCenter {
   display: flex;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: center;
 }
@@ -693,7 +741,7 @@ main #bestQuality p {
   align-items: center;
 }
 
-.flexColumnBetweenCenter {
+.flexColumnBetweenCenter, main #testimonials .testimonialCard {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -702,7 +750,7 @@ main #bestQuality p {
 
 .flexColumnBetweenStart {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
 }

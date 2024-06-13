@@ -1,25 +1,30 @@
 .flexCenterCenter {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 .flexAroundCenter {
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
 }
 .flexBetweenCenter {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
 .flexEndCenter {
     display: flex;
+    flex-direction: row;
     justify-content: flex-end;
     align-items: center;
 }
 .flexStartCenter {
     display: flex;
+    flex-direction: row;
     justify-content: flex-start;
     align-items: center;
 }
@@ -43,7 +48,7 @@
 }
 .flexColumnBetweenStart {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
 }
