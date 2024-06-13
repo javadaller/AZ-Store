@@ -10,11 +10,11 @@
                 <div class="shop__card">
                     <img src="' . $product['image_url'] . '" alt="' . $product['product'] . '">
                     <div class="card__details">
-                        <div class="card__details--name">
+                        <div class="card__details--name" id="'.$product['id'].'">
                             <p class="detail__name">' . $product['product'] . '</p>
                             <p class="detail__price">' . $product['price'] . '€</p>
                         </div>
-                        <button>Add to cart</button>
+                        <button class="card__btnAdd">Add to cart</button>
                     </div>
                 </div>
                 ';

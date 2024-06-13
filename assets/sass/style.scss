@@ -9,6 +9,8 @@ body {
     font-family: Ubuntu;
     color:var(--text);
     background-color: var(--background);
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 .divSexy {
