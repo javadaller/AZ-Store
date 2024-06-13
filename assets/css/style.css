@@ -517,6 +517,7 @@ template {
 :root {
   --background:#111827;
   --background2:#3b82f6;
+  --background3:#271692;
   --text:#e5e7eb;
   --text2:#2563eb;
 }
@@ -552,27 +553,76 @@ html[data-theme="dark"] {
 }
 footer {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  border-top: 1px solid #fff;
-  background-color: #000;
-}
-footer ul {
-  display: flex;
-  list-style-type: none;
-  padding: 20px 0;
-}
-footer ul li {
-  margin: 0 10px;
-}
-footer ul li a {
-  text-decoration: none;
-  color: #fff;
+  padding: 30px;
+  /*ul{
+      display: flex;
+      list-style-type: none;
+      padding: 20px 0;
+
+      li{
+          margin: 0 10px;
+
+          a{
+              text-decoration: none;
+              color: #fff;
+          }
+      }
+  }*/
 }
 
 main {
-  display: flex;
   flex-wrap: wrap;
+}
+@media only screen and (min-width: 500px) {
+  main {
+    flex-direction: row;
+  }
+}
+main #title {
+  width: 400px;
+  margin-left: 10%;
+}
+main #title h2 {
+  font-size: 4rem;
+}
+main #seeOurStore {
+  padding: 10px;
+  border-radius: 5px;
+  background: linear-gradient(90deg, var(--background2) 0%, var(--background3) 100%);
+  margin-bottom: 25px;
+}
+main #seeOurStore:hover {
+  transform: scale(110%);
+}
+main #logo {
+  position: relative;
+  margin: auto;
+  width: 450px;
+  height: 450px;
+  background-image: url("../images/shoe_one.png");
+}
+main #logo p {
+  z-index: -1;
+  font-size: 16rem;
+  color: var(--background);
+  text-shadow: 0px 0px 1px var(--text);
+}
+main h3 {
+  width: 80%;
+  margin-left: 10%;
+}
+main #bestQuality #logo2 {
+  margin-top: 50px;
+  width: 250px;
+  height: 250px;
+  background-image: url("../images/shoe_two.png");
+}
+main #bestQuality h2 {
+  font-size: 3rem;
+  width: 80%;
+}
+main #bestQuality p {
+  width: 90%;
 }
 
 main::-webkit-scrollbar {
@@ -589,7 +639,7 @@ main::-webkit-scrollbar-thumb {
   border: solid 7px var(--colorBackground);
 }
 
-.flexCenterCenter {
+.flexCenterCenter, footer, main {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -601,7 +651,7 @@ main::-webkit-scrollbar-thumb {
   align-items: center;
 }
 
-.flexBetweenCenter, header nav, header section {
+.flexBetweenCenter, nav, header section {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -619,7 +669,7 @@ main::-webkit-scrollbar-thumb {
   align-items: center;
 }
 
-.flexColumnCenterCenter {
+.flexColumnCenterCenter, main #title, main #bestQuality {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -647,7 +697,7 @@ main::-webkit-scrollbar-thumb {
   align-items: flex-start;
 }
 
-.absoluteCenter {
+.absoluteCenter, main #logo p {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -660,28 +710,21 @@ main::-webkit-scrollbar-thumb {
   left: 0;
 }
 
-.backgroundImageDefault {
+.backgroundImageDefault, main #logo, main #bestQuality #logo2 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.pointer, header nav div, header section img, header section div {
+.pointer, nav div, main #seeOurStore, header section img, header section div {
   cursor: pointer;
   transition: 0.3s;
 }
 
 header {
   flex-wrap: wrap;
-  height: 75px;
+  height: 150px;
   padding: 0px 3% 0px 3%;
-}
-header nav {
-  width: 300px;
-}
-header nav div:hover {
-  transform: scale(110%);
-  color: var(--text2);
 }
 header section {
   width: 75px;
@@ -733,8 +776,28 @@ header section div:hover {
   font-size: 12px;
 }
 
+nav {
+  width: 300px;
+}
+nav div:hover {
+  transform: scale(110%);
+  color: var(--text2);
+}
+
 body {
   font-family: Ubuntu;
   color: var(--text);
   background-color: var(--background);
+}
+
+.divSexy {
+  opacity: 0.1;
+  margin: 0% 10% 25px 10%;
+  width: 80%;
+  height: 1px;
+  border-bottom: solid 1px var(--text);
+}
+
+.blue {
+  color: var(--text2);
 }/*# sourceMappingURL=style.css.map */
