@@ -11,8 +11,9 @@ header {
         @include responsive(600px) {
             margin:0;
         }
-    }
 
+        @extend .pointer;
+    }
     section {
         position: absolute;
         top:2%;

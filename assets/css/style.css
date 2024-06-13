@@ -726,7 +726,7 @@ main #bestQuality p {
   background-size: cover;
 }
 
-.pointer, nav div, .shop__card .card__details button, main #seeOurStore, header section img, header section div {
+.pointer, nav div, .shop__card .card__details button, main #seeOurStore, header h1, header section img, header section div {
   cursor: pointer;
   transition: 0.3s;
 }

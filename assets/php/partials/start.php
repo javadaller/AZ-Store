@@ -16,7 +16,7 @@
     <body>
         
         <header>
-            <h1>AZ[store]</h1>
+            <h1 class="navHome">AZ[store]</h1>
 
             <nav>
                 <div class="navHome">Home</div>
