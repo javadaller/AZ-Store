@@ -38,7 +38,7 @@ export function nav() {
     const seeOurStore = document.querySelector('#seeOurStore')
     if(seeOurStore != null) {
         seeOurStore.addEventListener('click', () => {
-            window.location.href = 'https://github.com/javadaller';
+            window.location.href = 'https://www.nike.com/be/fr/';
         })
     }
 }
