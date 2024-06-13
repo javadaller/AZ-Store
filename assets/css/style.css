@@ -586,7 +586,7 @@ main #title h2 {
   font-size: 3.5rem;
   text-align: center;
 }
-@media only screen and (min-width: 950px) {
+@media only screen and (min-width: 1183px) {
   main #title h2 {
     text-align: start;
   }
@@ -603,7 +603,7 @@ main #seeOurStore {
   margin-bottom: 25px;
   align-self: center;
 }
-@media only screen and (min-width: 950px) {
+@media only screen and (min-width: 1183px) {
   main #seeOurStore {
     align-self: flex-start;
   }
@@ -942,7 +942,12 @@ main #about {
   }
 }
 main #about .teamTitle {
-  font-size: 5vw;
+  font-size: 8vw;
+}
+@media only screen and (min-width: 950px) {
+  main #about .teamTitle {
+    font-size: 5.5vw;
+  }
 }
 main #about .socials .github {
   display: inline;

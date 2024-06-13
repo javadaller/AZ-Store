@@ -11,7 +11,10 @@ main {
         }
 
         .teamTitle {
-            font-size: 5vw;
+            font-size: 8vw;
+            @include responsive(950px) {
+                font-size: 5.5vw;
+            }
         }
 
         .socials {

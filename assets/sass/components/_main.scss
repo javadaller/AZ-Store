@@ -12,7 +12,7 @@ main {
         h2 {
             font-size: 3.5rem;
             text-align: center;
-            @include responsive(950px) {
+            @include responsive(1183px) {
                 text-align: start;
             }
             @include responsive(600px) {
@@ -28,7 +28,7 @@ main {
         @extend .pointer;
         margin-bottom: 25px;
         align-self: center;
-        @include responsive(950px) {
+        @include responsive(1183px) {
             align-self: flex-start;
         }
     }
