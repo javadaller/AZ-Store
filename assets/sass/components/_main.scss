@@ -24,6 +24,10 @@ main {
         background: linear-gradient(90deg, var(--background2) 0%, var(--background3) 100%);
         @extend .pointer;
         margin-bottom: 25px;
+        align-self: center;
+        @include responsive(950px) {
+            align-self: flex-start;
+        }
     }
     #seeOurStore:hover {
         transform:scale(110%);
@@ -48,7 +52,7 @@ main {
         }
     }
 
-    h3 {
+    .ourLastProducts {
         width:80%;
         margin-left: 10%;
     }
@@ -78,6 +82,45 @@ main {
             @include responsive(950px) {
                 width:40%;
                 text-align: center;
+            }
+        }
+    }
+
+    #testimonials {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include box(100%,auto);
+        margin-top: 100px;
+        margin-bottom: 25px;
+        @include responsive(1500px) {
+            flex-direction: row;
+        }
+
+        .testimonialCard {
+            width:80%;
+            height: 100%;
+            margin-top: 25px;
+            @include responsive(1400px) {
+                width:60%;
+                margin-top: 0;
+            }
+            @include responsive(1000px) {
+                width:25%;
+            }
+            @extend .flexColumnBetweenCenter;
+            .portrait {
+                border-radius: 50%;
+                height: 100px;
+            }
+            .testimonialName {
+                margin-top: 25px;
+                text-align: center;
+            }
+            p {
+                margin-top: 25px;
+                width:100%;
             }
         }
     }

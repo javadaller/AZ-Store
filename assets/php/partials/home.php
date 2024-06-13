@@ -13,7 +13,7 @@
 
     <div class="divSexy"></div>
 
-    <h3><span class="blue">Our</span> last products</h3>
+    <h3 class="ourLastProducts"><span class="blue">Our</span> last products</h3>
 
 
     <?php   
@@ -21,9 +21,7 @@
     $products = json_decode($productsJson, true);
 
     if (is_array($products)) {
-        // Prenez les 4 derniers éléments du tableau
         $lastFourProducts = array_slice($products, -4);
-
         foreach ($lastFourProducts as $product) {
             echo '
                 <div class="shop__card">
@@ -33,7 +31,7 @@
                             <p class="detail__name">' . $product['product'] . '</p>
                             <p class="detail__price">' . $product['price'] . '€</p>
                         </div>
-                        <button>Add to cart</button>
+                        <button class="card__btnAdd">Add to cart</button>
                     </div>
                 </div>
                 ';
@@ -51,10 +49,26 @@
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem, beatae. Libero mollitia sequi blanditiis culpa voluptatem hic voluptatibus odio doloribus incidunt, dolores nihil necessitatibus, delectus explicabo. Maxime dicta nobis sint.</p>
 
         <article id="testimonials">
+            <section class="testimonialCard">
+                <img class="portrait" src="../images/image-emily.jpg">
+                <h3 class="testimonialName">Emily from xyz</h3>
+                <p>"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod accusantium at neque, quam corporis atque molestias vitae velit magnam dolor labore numquam sint eum doloribus. Porro, totam? Architecto, quasi? Corrupti."</p>
+            </section>
 
+            <section class="testimonialCard">
+                <img class="portrait" src="../images/image-thomas.jpg">
+                <h3 class="testimonialName">Thomas from corporate</h3>
+                <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis molestias commodi molestiae quasi eius maxime corporis distinctio, tempore doloremque facere quaerat dolorum aliquid pariatur amet adipisci, qui repudiandae doloribus magni!"</p>
+            </section>
+
+            <section class="testimonialCard">
+                <img class="portrait" src="../images/image-jennie.jpg">
+                <h3 class="testimonialName">Jennie from Nike</h3>
+                <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod vitae nulla aut alias! Autem blanditiis, dignissimos reprehenderit, commodi aspernatur, iste tempora delectus consequuntur suscipit itaque magnam repellat nobis similique nemo."</p>
+            </section>
         </article>
-    </section>
-    
 
-    <div id="divSexy"></div>
+        
+    </section>
+    <div class="divSexy"></div>
 </main>

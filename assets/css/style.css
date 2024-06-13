@@ -596,6 +596,12 @@ main #seeOurStore {
   border-radius: 5px;
   background: linear-gradient(90deg, var(--background2) 0%, var(--background3) 100%);
   margin-bottom: 25px;
+  align-self: center;
+}
+@media only screen and (min-width: 950px) {
+  main #seeOurStore {
+    align-self: flex-start;
+  }
 }
 main #seeOurStore:hover {
   transform: scale(110%);
@@ -618,7 +624,7 @@ main #logo p {
     font-size: 20vw;
   }
 }
-main h3 {
+main .ourLastProducts {
   width: 80%;
   margin-left: 10%;
 }
@@ -648,38 +654,86 @@ main #bestQuality p {
     text-align: center;
   }
 }
+main #testimonials {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin-top: 100px;
+  margin-bottom: 25px;
+}
+@media only screen and (min-width: 1500px) {
+  main #testimonials {
+    flex-direction: row;
+  }
+}
+main #testimonials .testimonialCard {
+  width: 80%;
+  height: 100%;
+  margin-top: 25px;
+}
+@media only screen and (min-width: 1400px) {
+  main #testimonials .testimonialCard {
+    width: 60%;
+    margin-top: 0;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  main #testimonials .testimonialCard {
+    width: 25%;
+  }
+}
+main #testimonials .testimonialCard .portrait {
+  border-radius: 50%;
+  height: 100px;
+}
+main #testimonials .testimonialCard .testimonialName {
+  margin-top: 25px;
+  text-align: center;
+}
+main #testimonials .testimonialCard p {
+  margin-top: 25px;
+  width: 100%;
+}
 
 .flexCenterCenter, footer, main {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
 .flexAroundCenter, header {
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
 }
 
 .flexBetweenCenter, nav, header section {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 
 .flexEndCenter {
   display: flex;
+  flex-direction: row;
   justify-content: flex-end;
   align-items: center;
 }
 
 .flexStartCenter {
   display: flex;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: center;
 }
 
-.flexColumnCenterCenter, main #title, main #bestQuality {
+.flexColumnCenterCenter, main #about, main #title, main #bestQuality {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -693,7 +747,7 @@ main #bestQuality p {
   align-items: center;
 }
 
-.flexColumnBetweenCenter {
+.flexColumnBetweenCenter, main #testimonials .testimonialCard {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -702,7 +756,7 @@ main #bestQuality p {
 
 .flexColumnBetweenStart {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
 }
@@ -726,7 +780,7 @@ main #bestQuality p {
   background-size: cover;
 }
 
-.pointer, nav div, .shop__card .card__details button, main #seeOurStore, header h1, header section img, header section div {
+.pointer, .shop__cart button, .shop__cart span, main #about .socials .linkedin, main #about .socials .github, nav div, .shop__card .card__details button, main #seeOurStore, header h1, header section img, header section div {
   cursor: pointer;
   transition: 0.3s;
 }
@@ -745,9 +799,9 @@ header h1 {
   }
 }
 header section {
-  position: absolute;
+  position: fixed;
   top: 2%;
-  right: 2%;
+  right: 5%;
   width: 75px;
 }
 header section img {
@@ -757,6 +811,22 @@ header section img {
 header section img:hover {
   transform: scale(110%);
   filter: invert(31%) sepia(99%) saturate(3070%) hue-rotate(215deg) brightness(95%) contrast(94%);
+}
+header section #loginSvg {
+  display: block;
+}
+@media only screen and (min-width: 850px) {
+  header section #loginSvg {
+    display: none;
+  }
+}
+header section div {
+  display: none;
+}
+@media only screen and (min-width: 850px) {
+  header section div {
+    display: block;
+  }
 }
 header section div:hover {
   transform: scale(110%);
@@ -839,10 +909,119 @@ main::-webkit-scrollbar-thumb {
   border-radius: 20px;
 }
 
+main #about {
+  width: 80%;
+  margin: 50px 0px 50px 0px;
+}
+@media only screen and (min-width: 800px) {
+  main #about {
+    width: 60%;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  main #about {
+    width: 50%;
+  }
+}
+main #about .teamTitle {
+  font-size: 5vw;
+}
+main #about .socials .github {
+  display: inline;
+  height: 25px;
+  filter: invert(94%) sepia(3%) saturate(814%) hue-rotate(197deg) brightness(104%) contrast(84%);
+}
+main #about .socials .github:hover {
+  transform: scale(110%);
+  filter: invert(31%) sepia(99%) saturate(3070%) hue-rotate(215deg) brightness(95%) contrast(94%);
+}
+main #about .socials .linkedin {
+  display: inline;
+  height: 25px;
+  filter: invert(94%) sepia(3%) saturate(814%) hue-rotate(197deg) brightness(104%) contrast(84%);
+}
+main #about .socials .linkedin:hover {
+  transform: scale(110%);
+  filter: invert(31%) sepia(99%) saturate(3070%) hue-rotate(215deg) brightness(95%) contrast(94%);
+}
+main #about .teamName {
+  margin-top: 50px;
+}
+main #about .teamDescription {
+  text-align: center;
+}
+
+.shop__cart {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.shop__cart #cart {
+  width: 75%;
+  border-radius: 5px;
+}
+.shop__cart #cart .cart__list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.shop__cart #cart .cart__list .cart__list__description {
+  display: flex;
+  align-items: center;
+  width: 40%;
+}
+.shop__cart #cart .cart__list .cart__list__description .list--divBtn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.shop__cart #cart .cart__list .cart__list__description img {
+  width: 75px;
+  margin: 0 10px;
+}
+.shop__cart #cart .cart__list .cart__list__price {
+  display: flex;
+}
+.shop__cart #cart .cart__list .cart__list__price span {
+  margin-left: 10px;
+}
+.shop__cart button {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-min-content;
+  height: min-content;
+  padding: 15px 15px;
+  margin: 20px;
+  font-size: 12px;
+  color: var(--text);
+  background-color: var(--background2);
+  border: none;
+  border-radius: 5px;
+}
+.shop__cart button:hover {
+  transform: scale(110%);
+  color: var(--background);
+  background-color: var(--text);
+}
+
+html {
+  height: 100%;
+  background: linear-gradient(180deg, var(--background) 0%, black 100%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
 body {
+  height: 100%;
+  min-height: 100dvh;
   font-family: Ubuntu;
   color: var(--text);
-  background-color: var(--background);
   overflow-x: hidden;
   overflow-y: scroll;
 }
