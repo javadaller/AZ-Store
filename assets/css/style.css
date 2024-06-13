@@ -774,7 +774,11 @@ main #testimonials .testimonialCard p {
   background-size: cover;
 }
 
+<<<<<<< HEAD
 .pointer, main #about .socials .linkedin, main #about .socials .github, nav div, .shop__card .card__details button, main #seeOurStore, header h1, header section img, header section div {
+=======
+.pointer, .shop__cart button, .shop__cart span, nav div, .shop__card .card__details button, main #seeOurStore, header h1, header section img, header section div {
+>>>>>>> origin/dylan
   cursor: pointer;
   transition: 0.3s;
 }
@@ -887,6 +891,7 @@ main::-webkit-scrollbar-thumb {
   border-radius: 20px;
 }
 
+<<<<<<< HEAD
 main #about {
   width: 80%;
   margin: 50px 0px 50px 0px;
@@ -936,6 +941,63 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
+=======
+.shop__cart {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.shop__cart #cart {
+  width: 75%;
+  border-radius: 5px;
+}
+.shop__cart #cart .cart__list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.shop__cart #cart .cart__list .cart__list__description {
+  display: flex;
+  align-items: center;
+  width: 40%;
+}
+.shop__cart #cart .cart__list .cart__list__description .list--divBtn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.shop__cart #cart .cart__list .cart__list__description img {
+  width: 75px;
+  margin: 0 10px;
+}
+.shop__cart #cart .cart__list .cart__list__price {
+  display: flex;
+}
+.shop__cart #cart .cart__list .cart__list__price span {
+  margin-left: 10px;
+}
+.shop__cart button {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-min-content;
+  height: min-content;
+  padding: 15px 15px;
+  margin: 20px;
+  font-size: 12px;
+  color: var(--text);
+  background-color: var(--background2);
+  border: none;
+  border-radius: 5px;
+}
+.shop__cart button:hover {
+  transform: scale(110%);
+  color: var(--background);
+  background-color: var(--text);
+>>>>>>> origin/dylan
 }
 
 body {
@@ -957,4 +1019,4 @@ body {
 
 .blue {
   color: var(--text2);
-}/*# sourceMappingURL=style.css.map */
+}

@@ -1,18 +1,33 @@
-import { Set } from "./LocalStorage.js";
+import { Get, Set } from "./LocalStorage.js";
+
+let arrayCart = []
 
 export function addCart() {
+    arrayCart = Get('cart', null) || []
+
     const btnAdd = document.querySelectorAll(".card__btnAdd")
-    let arrayCart=[]
-    btnAdd.forEach(element=>{
-        element.addEventListener("click", ()=>{
-            console.log(element.parentNode.parentNode.children[0].getAttribute("src"));
-            const object = {
-                name: element.previousElementSibling.children[0].innerText,
-                price:parseInt(element.previousElementSibling.children[1].innerText.replace('€', ''), 10),
-                image:element.parentNode.parentNode.children[0].getAttribute("src"),
+    btnAdd.forEach(element => {
+        element.addEventListener("click", () => {
+            const name = element.previousElementSibling.children[0].innerText;
+            const price = parseInt(element.previousElementSibling.children[1].innerText.replace('€', ''), 10);
+            const image = element.parentNode.parentNode.children[0].getAttribute("src");
+
+            const existingItem = arrayCart.find(item => item.name === name);
+
+            if (existingItem) {
+                existingItem.quantity += 1;
+                existingItem.totalPrice += price;
+            } else {
+                arrayCart.push({
+                    name: name,
+                    price: price,
+                    totalPrice: price,
+                    image: image,
+                    quantity: 1
+                });
             }
-            arrayCart.push(object)
-            Set('cart', arrayCart)
-        })
-    })
+
+            Set('cart', arrayCart);
+        });
+    });
 }
