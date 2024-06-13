@@ -726,7 +726,7 @@ main #bestQuality p {
   background-size: cover;
 }
 
-.pointer, .shop__cart #confirm, nav div, .shop__card .card__details button, main #seeOurStore, header h1, header section img, header section div {
+.pointer, .shop__cart button, .shop__cart span, nav div, .shop__card .card__details button, main #seeOurStore, header h1, header section img, header section div {
   cursor: pointer;
   transition: 0.3s;
 }
@@ -859,24 +859,38 @@ main::-webkit-scrollbar-thumb {
 .shop__cart #cart .cart__list .cart__list__description {
   display: flex;
   align-items: center;
+  width: 40%;
+}
+.shop__cart #cart .cart__list .cart__list__description .list--divBtn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .shop__cart #cart .cart__list .cart__list__description img {
   width: 75px;
-  margin-right: 20px;
+  margin: 0 10px;
 }
-.shop__cart #confirm {
+.shop__cart #cart .cart__list .cart__list__price {
+  display: flex;
+}
+.shop__cart #cart .cart__list .cart__list__price span {
+  margin-left: 10px;
+}
+.shop__cart button {
   width: -moz-fit-content;
   width: fit-content;
   height: -moz-min-content;
   height: min-content;
   padding: 15px 15px;
+  margin: 20px;
   font-size: 12px;
   color: var(--text);
   background-color: var(--background2);
   border: none;
   border-radius: 5px;
 }
-.shop__cart #confirm:hover {
+.shop__cart button:hover {
   transform: scale(110%);
   color: var(--background);
   background-color: var(--text);
