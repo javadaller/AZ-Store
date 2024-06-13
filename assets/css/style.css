@@ -989,24 +989,64 @@ main #about .teamDescription {
 .shop__cart #cart .cart__list {
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
 }
+@media only screen and (min-width: 768px) {
+  .shop__cart #cart .cart__list {
+    flex-direction: row;
+  }
+}
 .shop__cart #cart .cart__list .cart__list__description {
   display: flex;
+  flex-direction: column-reverse;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
   width: 40%;
+  text-align: center;
+  position: relative;
+}
+@media only screen and (min-width: 768px) {
+  .shop__cart #cart .cart__list .cart__list__description {
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
 }
 .shop__cart #cart .cart__list .cart__list__description .list--divBtn {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  position: absolute;
+  top: 96.5%;
+  width: 220%;
+}
+@media only screen and (min-width: 768px) {
+  .shop__cart #cart .cart__list .cart__list__description .list--divBtn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+.shop__cart #cart .cart__list .cart__list__description .list--divBtn span {
+  margin: 5px 45px;
+}
+@media only screen and (min-width: 768px) {
+  .shop__cart #cart .cart__list .cart__list__description .list--divBtn span {
+    margin: 5px;
+  }
 }
 .shop__cart #cart .cart__list .cart__list__description img {
-  width: 75px;
+  width: 100px;
   margin: 0 10px;
+}
+@media only screen and (min-width: 768px) {
+  .shop__cart #cart .cart__list .cart__list__description img {
+    width: 75px;
+  }
 }
 .shop__cart #cart .cart__list .cart__list__price {
   display: flex;
