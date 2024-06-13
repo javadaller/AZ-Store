@@ -1,3 +1,6 @@
+import { addCart } from "./components/addCart.js";
+import { displayCart } from "./components/displayCart.js";
+
 //nav
 const home = document.querySelectorAll('.navHome')
 home.forEach(element => {
@@ -21,7 +24,7 @@ products.forEach(element => {
 });
 
 const contact = document.querySelectorAll('.navContact')
-products.forEach(element => {
+contact.forEach(element => {
     element.addEventListener('click', () => {
         window.location.href = '../php/contact.php';
     })
@@ -35,6 +38,9 @@ document.querySelector('#login').addEventListener('click', () => {
     window.location.href = '../php/login.php';
 })
 
-document.querySelector('#seeOurStore').addEventListener('click', () => {
-    window.location.href = 'https://github.com/javadaller';
-})
+// document.querySelector('#seeOurStore').addEventListener('click', () => {
+//     window.location.href = 'https://github.com/javadaller';
+// })
+
+addCart()
+displayCart()

@@ -716,7 +716,7 @@ main::-webkit-scrollbar-thumb {
   background-size: cover;
 }
 
-.pointer, nav div, main #seeOurStore, header section img, header section div {
+.pointer, nav div, main #seeOurStore, header h1, header section img, header section div {
   cursor: pointer;
   transition: 0.3s;
 }
@@ -800,4 +800,4 @@ body {
 
 .blue {
   color: var(--text2);
-}/*# sourceMappingURL=style.css.map */
+}

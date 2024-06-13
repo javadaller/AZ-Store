@@ -5,7 +5,9 @@ header {
     flex-wrap: wrap;
     height:150px;
     padding:0px 3% 0px 3%;
-
+    h1{
+        @extend .pointer;
+    }
     section {
         @extend .flexBetweenCenter;
         width:75px;
