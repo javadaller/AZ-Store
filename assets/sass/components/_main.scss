@@ -6,14 +6,17 @@ main {
     }
 
     #title {
-        width:400px;
+        width:450px;
         margin-left: 10%;
         @extend .flexColumnCenterCenter;
         h2 {
-            font-size: 4rem;
+            font-size: 3.5rem;
             text-align: center;
             @include responsive(950px) {
                 text-align: start;
+            }
+            @include responsive(600px) {
+                font-size: 5rem;
             }
         }
     }
@@ -36,9 +39,14 @@ main {
     #logo {
         position:relative;
         margin: auto;
-        @include box(450px);
+        width:300px;
+        height: 300px;
         background-image: url("../images/shoe_one.png");
         @extend .backgroundImageDefault;
+        @include responsive(850px) {
+            width: 600px;
+            height: 600px;
+        }
 
         p {
             z-index: -1;
@@ -62,13 +70,18 @@ main {
 
         #logo2 {
             margin-top: 50px;
-            @include box(250px);
+            width: 200px;
+            height: 200px;
             background-image: url("../images/shoe_two.png");
             @extend .backgroundImageDefault;
+            @include responsive(850px) {
+                width: 350px;
+                height: 350px;
+            }
         }
 
         h2 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             width:80%;
             text-align: center;
             @include responsive(950px) {
@@ -101,7 +114,8 @@ main {
         .testimonialCard {
             width:80%;
             height: 100%;
-            margin-top: 25px;
+            //margin-top: 25px;
+            margin:10px;
             @include responsive(1400px) {
                 width:60%;
                 margin-top: 0;
