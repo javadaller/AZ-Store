@@ -1,59 +1,62 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="light">
+<?php require('./partials/start.php') ?>
+    <main>
+        <form action="" method="GET">
+            <label for="firstName">first name: </label><br>
+            <input name="firstName" id="firstName" type="text"><br><br>
+            <label for="lastName">last name: </label><br>
+            <input name="lastName" id="lastName" type="text"><br><br>
+            <label for="email">Email: </label><br>
+            <input type="text" name="email" id="email">
+            <label for="adresse">adresse :</label>
+            <input name="adresse" id="adresse" type="text"> 
+            <label for="city">city :</label>
+            <input name="city" id="city" type="text"> 
+            <label for="ZIP">ZIP code :</label>
+            <input name="ZIP" id="ZIP" type="number"> 
+            <label for="country">country :</label>
+            <input name="country" id="country" type="text"> 
+            <button type="submit">confirm command</button><br>
+        </form>
+        <?php
+            $firstname = cleanInput('firstName', '');
+            $lastname = cleanInput('lastName', '');
+            $email = cleanInput('email', '');
+            $adresse = cleanInput('adresse', '');
+            $city = cleanInput('city', '');
+            $ZIP = cleanInput('ZIP', '');
+            $country = cleanInput('country', '');
 
-    <head>
+            if (isset($firstname) && isset($lastname) && isset($email) && validEmail($email) && isset($adresse) && isset($city) && isset($ZIP) && isset($country)){
+                echo '<div class="pop-upWindow">Thank you for your order!</div>';
+                $firstname = null;
+                $lastname = null;
+                $email = null;
+                $adresse = null;
+                $city = null;
+                $ZIP = null;
+                $country = null;
+            }else{
+                echo '<div>Please enter all entries corectly</div>';
+            }
 
-        <title>AZ-Store</title>
-
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <link rel="stylesheet" type="text/css" href="../css/style.css">
-        <!--<link rel="icon" type="svg" href="assets/images/icons/calendar-todo-line.svg">-->
+            
+                
+            function cleanInput($input, $errorMessage){
+                if (isset($_GET[$input])){
+                    $content = trim($_GET[$input]);
+                    if (strlen($content) > 0){
+                        return $content;
+                    }
+                }
+                echo $errorMessage;   
+                return null;
+            }
+            function validEmail($emailToCheck) {
+                $valid = "/[a-zA-Z0-9_-.+]+@[a-zA-Z0-9-]+.[a-zA-Z]+/";
+                return ($emailToCheck == $valid);
+            }
+            
+        ?>
         
-    </head>
-    <body>
-        <main>
-            <form action="" method="GET">
-                <label for="firstName">first name: </label><br>
-                <input name="firstName" id="firstName" type="text"><br><br>
-                <label for="lastName">last name: </label><br>
-                <input name="lastName" id="lastName" type="text"><br><br>
-                <label for="email">Email: </label><br>
-                <input type="text" name="email" id="email">
-                <label for="adresse">adresse :</label>
-                <input name="adresse" id="adresse" type="text"> 
-                <label for="city">city :</label>
-                <input name="city" id="city" type="text"> 
-                <label for="ZIP">ZIP code :</label>
-                <input name="ZIP" id="ZIP" type="number"> 
-                <label for="country">country :</label>
-                <input name="country" id="country" type="text"> 
-                <button type="submit">confirm command</button><br>
-            </form>
-            <?php
-                $firstname = $_GET['firstName'];
-                $lastname = $_GET['lastName'];
-                $email = $_GET['email'];
-                $adresse = $_GET['adresse'];
-                $city = $_GET['city'];
-                $ZIP = $_GET['ZIP'];
-                $country = $_GET['country'];
-                if ((isset()) && (isset()) && (isset()) && (isset()) &&
-                (isset()) && (isset()) && validEmail(isset())){
-                    
-                }
-                
-                function validatetextForm(){
-
-                }
-                function validEmail($emailToCheck) {
-                    $valid = "/[a-zA-Z0-9_-.+]+@[a-zA-Z0-9-]+.[a-zA-Z]+/";
-                    return ($emailToCheck == $valid);
-                }
-                
-             ?>
-        </main>
-        <?php require('./partials/footer.php') ?>
-    </body>
-</html>
+    </main>
+<?php require('./partials/end.php') ?>
