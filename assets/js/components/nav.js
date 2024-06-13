@@ -35,7 +35,10 @@ export function nav() {
         window.location.href = '../php/login.php';
     })
 
-    document.querySelector('#seeOurStore').addEventListener('click', () => {
-        window.location.href = 'https://github.com/javadaller';
-    })
+    const seeOurStore = document.querySelector('#seeOurStore')
+    if(seeOurStore != null) {
+        seeOurStore.addEventListener('click', () => {
+            window.location.href = 'https://github.com/javadaller';
+        })
+    }
 }
