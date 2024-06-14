@@ -64,7 +64,7 @@ function checkAdresse($input, $missingMsg) {
 
 <main>
     <section class="shop__cart">
-        <section id="cart"> <!-- Contenu généré en JS --> </section>
+        <section id="cart_checkout" class="cart"> <!-- Contenu généré en JS --> </section>
     </section>
     <form action="" method="GET">
         <div>

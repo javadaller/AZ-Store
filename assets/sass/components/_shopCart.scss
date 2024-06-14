@@ -6,7 +6,7 @@
     span{
         @extend .pointer;
     }
-    #cart{
+    .cart{
         width: 75%;
         border-radius: 5px;
         .cart__list{
