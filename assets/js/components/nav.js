@@ -46,7 +46,10 @@ export function nav() {
         })
     }
 
-    document.querySelector("#confirm").addEventListener('click',()=>{
-        window.location.href = '../php/checkout.php';
-    })
+    const confirm = document.querySelector("#confirm")
+    if(confirm!= null){
+        confirm.addEventListener('click',()=>{
+            window.location.href = '../php/checkout.php';
+        })
+    }
 }

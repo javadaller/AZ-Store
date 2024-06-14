@@ -5,7 +5,6 @@ export function popup() {
 
     for (const element of btnAdd) {
         element.addEventListener("click", () => {
-            console.log("je suis là");
 
             if (interval) {
                 clearInterval(interval);
@@ -17,7 +16,6 @@ export function popup() {
 
             setTimeout(() => {
                 interval = setInterval(() => {
-                    console.log("tu es dans l'interval");
                     popup.style.opacity -= 0.025;
                     if (popup.style.opacity <= 0) {
                         clearInterval(interval);
