@@ -50,19 +50,19 @@
 
         <article id="testimonials">
             <section class="testimonialCard">
-                <img class="portrait" src="../images/image-emily.jpg">
+                <img class="portrait" src="assets/images/image-emily.jpg">
                 <h3 class="testimonialName">Emily from xyz</h3>
                 <p>"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod accusantium at neque, quam corporis atque molestias vitae velit magnam dolor labore numquam sint eum doloribus. Porro, totam? Architecto, quasi? Corrupti."</p>
             </section>
 
             <section class="testimonialCard">
-                <img class="portrait" src="../images/image-thomas.jpg">
+                <img class="portrait" src="assets/images/image-thomas.jpg">
                 <h3 class="testimonialName">Thomas from corporate</h3>
                 <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis molestias commodi molestiae quasi eius maxime corporis distinctio, tempore doloremque facere quaerat dolorum aliquid pariatur amet adipisci, qui repudiandae doloribus magni!"</p>
             </section>
 
             <section class="testimonialCard">
-                <img class="portrait" src="../images/image-jennie.jpg">
+                <img class="portrait" src="assets/images/image-jennie.jpg">
                 <h3 class="testimonialName">Jennie from Nike</h3>
                 <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod vitae nulla aut alias! Autem blanditiis, dignissimos reprehenderit, commodi aspernatur, iste tempora delectus consequuntur suscipit itaque magnam repellat nobis similique nemo."</p>
             </section>
