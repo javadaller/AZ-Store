@@ -580,7 +580,6 @@ main {
 }
 main #title {
   width: 450px;
-  margin-left: 10%;
 }
 main #title h2 {
   font-size: 3.5rem;
@@ -589,6 +588,7 @@ main #title h2 {
 @media only screen and (min-width: 1183px) {
   main #title h2 {
     text-align: start;
+    margin-left: 10%;
   }
 }
 @media only screen and (min-width: 600px) {
@@ -1091,8 +1091,8 @@ form div input[type=text] {
   width: 60%;
 }
 form div input[type=number] {
-  width: 100px;
-  margin-right: 35%;
+  width: 30%;
+  margin-right: 30%;
 }
 form div div {
   color: rgb(209, 0, 0);

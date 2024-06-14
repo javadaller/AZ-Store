@@ -7,13 +7,14 @@ main {
 
     #title {
         width:450px;
-        margin-left: 10%;
+        //margin-left: 10%;
         @extend .flexColumnCenterCenter;
         h2 {
             font-size: 3.5rem;
             text-align: center;
             @include responsive(1183px) {
                 text-align: start;
+                margin-left: 10%;
             }
             @include responsive(600px) {
                 font-size: 5rem;
