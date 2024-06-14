@@ -1,7 +1,8 @@
 <?php require('./partials/start.php') ?>
     <main>
-
-        
+        <section class="shop__cart">
+            <section id="cart"> <!-- Contenu généré en JS --> </section>    
+        </section>
         <form action="" method="GET">
             <label for="firstName">first name: </label>
             <input name="firstName" id="firstName" type="text" value=<?php $firstname; ?>>
@@ -42,7 +43,10 @@
                 $country = null;
             }else{
                 echo "<div>$emptyInput</div>";
+                $emptyInput = null;
             }
+
+            $emptyInput = null;
 
             function checkInput($input, $missingMsg, $format, $wrongMsg){
                 if (isset($_GET[$input])){
