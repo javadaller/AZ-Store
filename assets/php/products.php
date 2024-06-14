@@ -1,7 +1,7 @@
 <?php require('./partials/start.php') ?>
 
     <main>
-
+        <?php require('./partials/popup.php') ?>
         <?php   
         $productsJson = file_get_contents('../../data.json');
         $products = json_decode($productsJson, true);
