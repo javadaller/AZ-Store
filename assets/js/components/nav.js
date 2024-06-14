@@ -45,4 +45,8 @@ export function nav() {
             window.location.href = 'https://www.nike.com/be/fr/';
         })
     }
+
+    document.querySelector("#confirm").addEventListener('click',()=>{
+        window.location.href = '../php/checkout.php';
+    })
 }

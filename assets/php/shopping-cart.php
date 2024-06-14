@@ -5,7 +5,7 @@
             <section id="cart"> <!-- Contenu généré en JS --> </section>
             <div>
                 <button class="navProducts">Back to products</button>
-                <button id="confirm">Confirm</button>
+                <button id="confirm">Checkout</button>
             </div>
         </section>
     </main>

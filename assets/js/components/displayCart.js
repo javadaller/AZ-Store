@@ -3,10 +3,10 @@ import * as DOM from "./generateElement.js";
 
 export function displayCart() {
     const cart = document.querySelector("#cart")
-    if(cart != null) {
-        let arrayCart = Get('cart', null)
-        if(arrayCart!==null){
-            for (const element of arrayCart) {
+    let arrayCart = Get('cart', null)
+    if(arrayCart!==null){
+        for (const element of arrayCart) {
+            if(cart!=null){
                 const listCart = DOM.createDiv(cart,'cart__list')
                 const listCartLeft = DOM.createDiv(listCart,'cart__list__description')
                 const divBtn = DOM.createDiv(listCartLeft,"list--divBtn")
