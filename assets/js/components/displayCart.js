@@ -6,45 +6,47 @@ export function displayCart() {
     let arrayCart = Get('cart', null)
     if(arrayCart!==null){
         for (const element of arrayCart) {
-            const listCart = DOM.createDiv(cart,'cart__list')
-            const listCartLeft = DOM.createDiv(listCart,'cart__list__description')
-            const divBtn = DOM.createDiv(listCartLeft,"list--divBtn")
-            const add = DOM.generateElement("span","add",divBtn,"material-symbols-outlined")
-            const remove = DOM.generateElement("span","remove",divBtn,"material-symbols-outlined")
-            DOM.generateImg(element.image,element.name,listCartLeft,"list--img")
-            DOM.generateElement("p", element.name,listCartLeft,"list--name")
-            const quantity = DOM.generateElement("p", `Quantité: ${element.quantity}`,listCart,"list--quantity")
-            const listCartRight = DOM.createDiv(listCart,'cart__list__price')
-            const totalPrice = DOM.generateElement("p", `${element.totalPrice}€`, listCartRight, "list--price")
-            const deleted = DOM.generateElement("span","delete",listCartRight,"material-symbols-outlined")
-            const divSexy = DOM.createDiv(cart,"divSexy")
+            if(cart!=null){
+                const listCart = DOM.createDiv(cart,'cart__list')
+                const listCartLeft = DOM.createDiv(listCart,'cart__list__description')
+                const divBtn = DOM.createDiv(listCartLeft,"list--divBtn")
+                const add = DOM.generateElement("span","add",divBtn,"material-symbols-outlined")
+                const remove = DOM.generateElement("span","remove",divBtn,"material-symbols-outlined")
+                DOM.generateImg(element.image,element.name,listCartLeft,"list--img")
+                DOM.generateElement("p", element.name,listCartLeft,"list--name")
+                const quantity = DOM.generateElement("p", `Quantité: ${element.quantity}`,listCart,"list--quantity")
+                const listCartRight = DOM.createDiv(listCart,'cart__list__price')
+                const totalPrice = DOM.generateElement("p", `${element.totalPrice}€`, listCartRight, "list--price")
+                const deleted = DOM.generateElement("span","delete",listCartRight,"material-symbols-outlined")
+                const divSexy = DOM.createDiv(cart,"divSexy")
 
-            add.addEventListener("click",()=>{
-                element.quantity+=1
-                element.totalPrice += element.price
-                Set('cart', arrayCart)
-                quantity.innerText = `Quantité: ${element.quantity}`
-                totalPrice.innerText = `${element.totalPrice}€`
-            })
+                add.addEventListener("click",()=>{
+                    element.quantity+=1
+                    element.totalPrice += element.price
+                    Set('cart', arrayCart)
+                    quantity.innerText = `Quantité: ${element.quantity}`
+                    totalPrice.innerText = `${element.totalPrice}€`
+                })
 
-            remove.addEventListener("click", ()=>{
-                element.quantity-=1
-                element.totalPrice -= element.price
-                Set('cart', arrayCart)
-                quantity.innerText = `Quantité: ${element.quantity}`
-                totalPrice.innerText = `${element.totalPrice}€`
-                if (element.quantity==0) {
+                remove.addEventListener("click", ()=>{
+                    element.quantity-=1
+                    element.totalPrice -= element.price
+                    Set('cart', arrayCart)
+                    quantity.innerText = `Quantité: ${element.quantity}`
+                    totalPrice.innerText = `${element.totalPrice}€`
+                    if (element.quantity==0) {
+                        listCart.remove()
+                        divSexy.remove()
+                        removeFromCart(element.name, arrayCart)
+                    }
+                })
+
+                deleted.addEventListener("click",()=>{
                     listCart.remove()
                     divSexy.remove()
-                    removeFromCart(element.name, arrayCart)
-                }
-            })
-
-            deleted.addEventListener("click",()=>{
-                listCart.remove()
-                divSexy.remove()
-                removeFromCart(element.name,arrayCart)
-            })
+                    removeFromCart(element.name,arrayCart)
+                })
+            }
         }
     }
 }

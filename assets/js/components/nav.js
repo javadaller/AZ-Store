@@ -38,4 +38,8 @@ export function nav() {
     // document.querySelector('#seeOurStore').addEventListener('click', () => {
     //     window.location.href = 'https://github.com/javadaller';
     // })
+
+    document.querySelector("#confirm").addEventListener('click',()=>{
+        window.location.href = '../php/checkout.php';
+    })
 }
