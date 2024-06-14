@@ -731,7 +731,7 @@ main #testimonials .testimonialCard p {
   align-items: center;
 }
 
-.flexBetweenCenter, nav, header section {
+.flexBetweenCenter, form div, nav, header section {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -752,7 +752,7 @@ main #testimonials .testimonialCard p {
   align-items: center;
 }
 
-.flexColumnCenterCenter, main #about, main #title, main #bestQuality {
+.flexColumnCenterCenter, form, main #about, main #title, main #bestQuality {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -799,7 +799,7 @@ main #testimonials .testimonialCard p {
   background-size: cover;
 }
 
-.pointer, .shop__cart button, .shop__cart span, main #about .socials .linkedin, main #about .socials .github, nav div, .shop__card .card__details button, main #seeOurStore, header h1, header section img, header section div {
+.pointer, form button, .shop__cart button, .shop__cart span, main #about .socials .linkedin, main #about .socials .github, nav div, .shop__card .card__details button, main #seeOurStore, header h1, header section img, header section div {
   cursor: pointer;
   transition: 0.3s;
 }
@@ -1068,6 +1068,48 @@ main #about .teamDescription {
   border-radius: 5px;
 }
 .shop__cart button:hover {
+  transform: scale(110%);
+  color: var(--background);
+  background-color: var(--text);
+}
+
+form {
+  width: 60%;
+  margin-top: 50px;
+}
+@media only screen and (min-width: 800px) {
+  form {
+    width: 500px;
+  }
+}
+form div {
+  width: 100%;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+form div input[type=text] {
+  width: 60%;
+}
+form div input[type=number] {
+  width: 100px;
+  margin-right: 35%;
+}
+form div div {
+  color: rgb(209, 0, 0);
+}
+form button {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-min-content;
+  height: min-content;
+  padding: 15px 15px;
+  font-size: 12px;
+  color: var(--text);
+  background-color: var(--background2);
+  border: none;
+  border-radius: 5px;
+}
+form button:hover {
   transform: scale(110%);
   color: var(--background);
   background-color: var(--text);

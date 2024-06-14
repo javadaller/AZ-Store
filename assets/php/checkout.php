@@ -66,42 +66,51 @@ function checkAdresse($input, $missingMsg) {
         <section id="cart"> <!-- Contenu généré en JS --> </section>
     </section>
     <form action="" method="GET">
-        <label for="firstName">First name: </label>
+        <div>
+<label for="firstName">First name: </label>
         <input name="firstName" id="firstName" type="text" value="<?php echo htmlspecialchars($firstname); ?>">
-        <span><?php echo $firstNameError; ?></span>
-        <br>
-
+        <div><?php echo $firstNameError; ?></div>
+        </div>
+        
+        
+        <div>
         <label for="lastName">Last name: </label>
         <input name="lastName" id="lastName" type="text" value="<?php echo htmlspecialchars($lastname); ?>">
-        <span><?php echo $lastNameError; ?></span>
-        <br>
-
+        <div><?php echo $lastNameError; ?></div>
+        </div>
+        
+        <div>
         <label for="email">Email: </label>
         <input type="text" name="email" id="email" value="<?php echo htmlspecialchars($email); ?>">
-        <span><?php echo $emailError; ?></span>
-        <br>
-
+        <div><?php echo $emailError; ?></div>
+        </div>
+        
+        <div>
         <label for="adresse">Adresse:</label>
         <input name="adresse" id="adresse" type="text" value="<?php echo htmlspecialchars($adresse); ?>">
-        <span><?php echo $adresseError; ?></span>
-        <br>
-
+        <div><?php echo $adresseError; ?></div>
+        </div>
+        
+        <div>
         <label for="city">City:</label>
         <input name="city" id="city" type="text" value="<?php echo htmlspecialchars($city); ?>">
-        <span><?php echo $cityError; ?></span>
-        <br>
-
+        <div><?php echo $cityError; ?></div>
+        </div>
+        
+        <div>
         <label for="ZIP">ZIP code:</label>
         <input name="ZIP" id="ZIP" type="number" value="<?php echo htmlspecialchars($ZIP); ?>">
-        <span><?php echo $zipError; ?></span>
-        <br>
-
+        <div><?php echo $zipError; ?></div>
+        </div>
+        
+        <div>
         <label for="country">Country:</label>
         <input name="country" id="country" type="text" value="<?php echo htmlspecialchars($country); ?>">
-        <span><?php echo $countryError; ?></span>
-        <br>
+        <div><?php echo $countryError; ?></div>
+        </div>
+        
 
-        <button type="submit">Confirm command</button><br>
+        <button type="submit">Confirm command</button>
     </form>
 </main>
 
