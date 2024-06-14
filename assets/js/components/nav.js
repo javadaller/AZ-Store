@@ -23,7 +23,7 @@ export function nav() {
     const contact = document.querySelectorAll('.navContact')
     contact.forEach(element => {
         element.addEventListener('click', () => {
-            window.location.href = '../php/contact.php';
+            window.location.href = 'https://www.radiocontact.be/';
         })
     });
 
@@ -35,9 +35,16 @@ export function nav() {
         window.location.href = '../php/login.php';
     })
 
-    // document.querySelector('#seeOurStore').addEventListener('click', () => {
-    //     window.location.href = 'https://github.com/javadaller';
-    // })
+    document.querySelector('#loginSvg').addEventListener('click', () => {
+        window.location.href = '../php/login.php';
+    })
+
+    const seeOurStore = document.querySelector('#seeOurStore')
+    if(seeOurStore != null) {
+        seeOurStore.addEventListener('click', () => {
+            window.location.href = 'https://www.nike.com/be/fr/';
+        })
+    }
 
     document.querySelector("#confirm").addEventListener('click',()=>{
         window.location.href = '../php/checkout.php';

@@ -29,6 +29,9 @@
 
             <section>
                 <img class="navShoppingcart" src="../images/icons/shopping-cart.svg" alt="shopping cart">
+                <img id="loginSvg" src="../images/icons/user-line.svg" alt="user">
                 <div id="login">Login</div>
             </section> 
         </header>
+
+        <div class="divSexy"></div>

@@ -1,0 +1,52 @@
+main {
+    #about {
+        width:80%;
+        @extend .flexColumnCenterCenter;
+        margin: 50px 0px 50px 0px;
+        @include responsive(800px) {
+            width:60%;
+        }
+        @include responsive(1000px) {
+            width:50%;
+        }
+
+        .teamTitle {
+            font-size: 8vw;
+            @include responsive(950px) {
+                font-size: 5.5vw;
+            }
+        }
+
+        .socials {
+            .github {
+                display: inline;
+                height:25px;
+                filter: invert(94%) sepia(3%) saturate(814%) hue-rotate(197deg) brightness(104%) contrast(84%);
+                @extend .pointer;
+            }
+            .github:hover {
+                transform: scale(110%);
+                filter: invert(31%) sepia(99%) saturate(3070%) hue-rotate(215deg) brightness(95%) contrast(94%);
+            }
+
+            .linkedin {
+                display: inline;
+                height:25px;
+                filter: invert(94%) sepia(3%) saturate(814%) hue-rotate(197deg) brightness(104%) contrast(84%);
+                @extend .pointer;
+            }
+            .linkedin:hover {
+                transform: scale(110%);
+                filter: invert(31%) sepia(99%) saturate(3070%) hue-rotate(215deg) brightness(95%) contrast(94%);
+            }
+        }
+
+        .teamName {
+            margin-top: 50px;
+        }
+
+        .teamDescription {
+            text-align: center;
+        }
+    }
+}
