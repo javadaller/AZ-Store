@@ -19,7 +19,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET' && !empty($_GET)) {
     // Si pas d'erreurs, afficher le message de confirmation
     if (empty($firstNameError) && empty($lastNameError) && empty($emailError) && empty($adresseError) &&
         empty($cityError) && empty($zipError) && empty($countryError)) {
-        echo '<div class="pop-upWindow">Thank you for your order!</div>';
+        echo '<div class="pop-upWindow">Thank you for your order!</div>
+        <script>localStorage.removeItem(\'cart\');</script>';
         $firstname = $lastname = $email = $adresse = $city = $ZIP = $country = '';
     }
 }
@@ -63,7 +64,7 @@ function checkAdresse($input, $missingMsg) {
 
 <main>
     <section class="shop__cart">
-        <section id="cart"> <!-- Contenu généré en JS --> </section>
+        <section id="cart_checkout" class="cart"> <!-- Contenu généré en JS --> </section>
     </section>
     <form action="" method="GET">
         <div>

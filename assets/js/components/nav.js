@@ -47,8 +47,8 @@ export function nav() {
     }
 
     const confirm = document.querySelector("#confirm")
-    if(confirm != null) {
-        document.querySelector("#confirm").addEventListener('click',()=>{
+    if(confirm!= null){
+        confirm.addEventListener('click',()=>{
             window.location.href = '../php/checkout.php';
         })
     }
