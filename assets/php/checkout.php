@@ -1,4 +1,4 @@
-<?php require('./partials/start.php'); ?>
+<?php require('./partials/start2.php'); ?>
 
 <?php
 // Initialisation des variables
@@ -115,4 +115,4 @@ function checkAdresse($input, $missingMsg) {
     </form>
 </main>
 
-<?php require('./partials/end.php'); ?>
+<?php require('./partials/end2.php'); ?>

@@ -17,15 +17,16 @@
 
 
     <?php   
-    $productsJson = file_get_contents('../../data.json');
+    $productsJson = file_get_contents('data.json');
     $products = json_decode($productsJson, true);
 
     if (is_array($products)) {
         $lastFourProducts = array_slice($products, -4);
         foreach ($lastFourProducts as $product) {
+            $imageUrl = str_replace('..', 'assets', $product['image_url']);
             echo '
                 <div class="shop__card">
-                    <img src="' . $product['image_url'] . '" alt="' . $product['product'] . '">
+                    <img src="' . $imageUrl . '" alt="' . $product['product'] . '">
                     <div class="card__details">
                         <div class="card__details--name">
                             <p class="detail__name">' . $product['product'] . '</p>

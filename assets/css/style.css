@@ -580,6 +580,7 @@ main {
 }
 main #title {
   width: 450px;
+  margin-left: 0;
 }
 main #title h2 {
   font-size: 3.5rem;
@@ -588,7 +589,8 @@ main #title h2 {
 @media only screen and (min-width: 1183px) {
   main #title h2 {
     text-align: start;
-    margin-left: 10%;
+    margin-left: 80%;
+    width: 600px;
   }
 }
 @media only screen and (min-width: 600px) {
@@ -598,6 +600,7 @@ main #title h2 {
 }
 main #seeOurStore {
   padding: 10px;
+  margin-left: 0;
   border-radius: 5px;
   background: linear-gradient(90deg, var(--background2) 0%, var(--background3) 100%);
   margin-bottom: 25px;
@@ -606,6 +609,7 @@ main #seeOurStore {
 @media only screen and (min-width: 1183px) {
   main #seeOurStore {
     align-self: flex-start;
+    margin-left: 23%;
   }
 }
 main #seeOurStore:hover {
@@ -982,11 +986,11 @@ main #about .teamDescription {
   flex-direction: column;
   align-items: center;
 }
-.shop__cart #cart {
+.shop__cart .cart {
   width: 75%;
   border-radius: 5px;
 }
-.shop__cart #cart .cart__list {
+.shop__cart .cart .cart__list {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -995,11 +999,11 @@ main #about .teamDescription {
   padding: 10px;
 }
 @media only screen and (min-width: 768px) {
-  .shop__cart #cart .cart__list {
+  .shop__cart .cart .cart__list {
     flex-direction: row;
   }
 }
-.shop__cart #cart .cart__list .cart__list__description {
+.shop__cart .cart .cart__list .cart__list__description {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1010,19 +1014,19 @@ main #about .teamDescription {
   position: relative;
 }
 @media only screen and (min-width: 768px) {
-  .shop__cart #cart .cart__list .cart__list__description {
+  .shop__cart .cart .cart__list .cart__list__description {
     flex-wrap: nowrap;
     flex-direction: row;
     justify-content: flex-start;
   }
 }
-.shop__cart #cart .cart__list .cart__list__description .list--divBtn {
+.shop__cart .cart .cart__list .cart__list__description .list--divBtn {
   position: absolute;
   top: 96.5%;
   width: 220%;
 }
 @media only screen and (min-width: 768px) {
-  .shop__cart #cart .cart__list .cart__list__description .list--divBtn {
+  .shop__cart .cart .cart__list .cart__list__description .list--divBtn {
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
@@ -1032,27 +1036,27 @@ main #about .teamDescription {
     width: fit-content;
   }
 }
-.shop__cart #cart .cart__list .cart__list__description .list--divBtn span {
+.shop__cart .cart .cart__list .cart__list__description .list--divBtn span {
   margin: 5px 45px;
 }
 @media only screen and (min-width: 768px) {
-  .shop__cart #cart .cart__list .cart__list__description .list--divBtn span {
+  .shop__cart .cart .cart__list .cart__list__description .list--divBtn span {
     margin: 5px;
   }
 }
-.shop__cart #cart .cart__list .cart__list__description img {
+.shop__cart .cart .cart__list .cart__list__description img {
   width: 100px;
   margin: 0 10px;
 }
 @media only screen and (min-width: 768px) {
-  .shop__cart #cart .cart__list .cart__list__description img {
+  .shop__cart .cart .cart__list .cart__list__description img {
     width: 75px;
   }
 }
-.shop__cart #cart .cart__list .cart__list__price {
+.shop__cart .cart .cart__list .cart__list__price {
   display: flex;
 }
-.shop__cart #cart .cart__list .cart__list__price span {
+.shop__cart .cart .cart__list .cart__list__price span {
   margin-left: 10px;
 }
 .shop__cart button {

@@ -1,7 +1,7 @@
-<?php require('./partials/start.php') ?>
+<?php require('./partials/start2.php') ?>
 
     <main>
 
     </main>
 
-<?php require('./partials/end.php') ?>
+<?php require('./partials/end2.php') ?>

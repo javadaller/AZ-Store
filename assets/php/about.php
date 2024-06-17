@@ -1,4 +1,4 @@
-<?php require('./partials/start.php') ?>
+<?php require('./partials/start2.php') ?>
 
     <main>
         <section id="about">
@@ -31,4 +31,4 @@
 
     <div class="divSexy"></div>
 
-<?php require('./partials/end.php') ?>
+<?php require('./partials/end2.php') ?>

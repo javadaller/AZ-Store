@@ -1,4 +1,4 @@
-<?php require('./partials/start.php') ?>
+<?php require('./partials/start2.php') ?>
 
     <main>
         <section class="shop__cart">
@@ -10,4 +10,4 @@
         </section>
     </main>
 
-<?php require('./partials/end.php') ?>
+<?php require('./partials/end2.php') ?>

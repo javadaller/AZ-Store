@@ -1,22 +1,36 @@
 export function nav() {
+    const currentPage = window.location.pathname
+
     const home = document.querySelectorAll('.navHome')
     home.forEach(element => {
         element.addEventListener('click', () => {
-            window.location.href = '../php/index.php';
+            if(currentPage.includes('index.php')) {
+                window.location.href = 'index.php';
+            } else {
+                window.location.href = '../../index.php';
+            }
         })
     });
 
     const about = document.querySelectorAll('.navAbout')
     about.forEach(element => {
         element.addEventListener('click', () => {
-            window.location.href = '../php/about.php';
+            if(currentPage.includes('index.php')) {
+                window.location.href = 'assets/php/about.php';
+            } else {
+                window.location.href = './about.php';
+            }
         })
     });
 
     const products = document.querySelectorAll('.navProducts')
     products.forEach(element => {
         element.addEventListener('click', () => {
-            window.location.href = '../php/products.php';
+            if(currentPage.includes('index.php')) {
+                window.location.href = 'assets/php/products.php';
+            } else {
+                window.location.href = './products.php';
+            }
         })
     });
 
@@ -28,15 +42,27 @@ export function nav() {
     });
 
     document.querySelector('.navShoppingcart').addEventListener('click', () => {
-        window.location.href = '../php/shopping-cart.php';
+        if(currentPage.includes('index.php')) {
+            window.location.href = 'assets/php/shopping-cart.php';
+        } else {
+            window.location.href = './shopping-cart.php';
+        }
     })
 
     document.querySelector('#login').addEventListener('click', () => {
-        window.location.href = '../php/login.php';
+        if(currentPage.includes('index.php')) {
+            window.location.href = 'assets/php/login.php';
+        } else {
+            window.location.href = './login.php';
+        }
     })
 
     document.querySelector('#loginSvg').addEventListener('click', () => {
-        window.location.href = '../php/login.php';
+        if(currentPage.includes('index.php')) {
+            window.location.href = 'assets/php/login.php';
+        } else {
+            window.location.href = './login.php';
+        }
     })
 
     const seeOurStore = document.querySelector('#seeOurStore')
@@ -49,7 +75,11 @@ export function nav() {
     const confirm = document.querySelector("#confirm")
     if(confirm!= null){
         confirm.addEventListener('click',()=>{
-            window.location.href = '../php/checkout.php';
+            if(currentPage.includes('index.php')) {
+                window.location.href = 'assets/php/checkout.php';
+            } else {
+                window.location.href = './checkout.php';
+            }
         })
     }
 }
